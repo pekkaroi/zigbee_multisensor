@@ -16,7 +16,6 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_default_backends.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_frontend.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_str_formatter.c \
-  $(SDK_ROOT)/components/boards/boards.c \
   $(SDK_ROOT)/external/zboss/zb_error/zb_error_to_string.c \
   $(SDK_ROOT)/external/zboss/osif/zb_nrf52_common.c \
   $(SDK_ROOT)/external/zboss/osif/zb_nrf52_nrf_logger.c \
@@ -70,7 +69,6 @@ SRC_FILES += \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_saadc.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_twi.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_twim.c \
-  $(SDK_ROOT)/components/libraries/bsp/bsp.c \
   $(PROJ_DIR)/sht31.c \
   $(PROJ_DIR)/main.c \
   $(SDK_ROOT)/modules/nrfx/mdk/system_nrf52840.c \
@@ -141,7 +139,7 @@ OPT = -Os -ggdb3
 CFLAGS += $(OPT)
 CFLAGS += -DAPP_TIMER_V2
 CFLAGS += -DAPP_TIMER_V2_RTC1_ENABLED
-CFLAGS += -DBOARD_PERO_ZIGBEECOINCELL_REV1
+CFLAGS += -DBOARD_PCA10056
 CFLAGS += -DCONFIG_GPIO_AS_PINRESET
 CFLAGS += -DENABLE_FEM
 CFLAGS += -DFLOAT_ABI_HARD
@@ -166,7 +164,7 @@ ASMFLAGS += -mthumb -mabi=aapcs
 ASMFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
 ASMFLAGS += -DAPP_TIMER_V2
 ASMFLAGS += -DAPP_TIMER_V2_RTC1_ENABLED
-ASMFLAGS += -DBOARD_PERO_ZIGBEECOINCELL_REV1
+ASMFLAGS += -DBOARD_PCA10056
 ASMFLAGS += -DCONFIG_GPIO_AS_PINRESET
 ASMFLAGS += -DENABLE_FEM
 ASMFLAGS += -DFLOAT_ABI_HARD
